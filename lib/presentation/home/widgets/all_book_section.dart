@@ -1,12 +1,77 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../app/config/app_style.dart';
 import '../../../app/config/config.dart';
 import '../../../data/model/books_model.dart';
 
+// ignore: must_be_immutable
 class AllBookSection extends StatelessWidget {
   List<BooksModel> booksList = [
+    BooksModel(
+      icon: 'assets/images/green_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
+    BooksModel(
+      icon: 'assets/images/blue_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
+    BooksModel(
+      icon: 'assets/images/red_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
+    BooksModel(
+      icon: 'assets/images/green_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
+    BooksModel(
+      icon: 'assets/images/blue_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
+    BooksModel(
+      icon: 'assets/images/red_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
+    BooksModel(
+      icon: 'assets/images/green_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
+    BooksModel(
+      icon: 'assets/images/blue_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
+    BooksModel(
+      icon: 'assets/images/red_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
     BooksModel(
       icon: 'assets/images/green_polygon.svg',
       bookName: 'Book Name',
@@ -40,7 +105,7 @@ class AllBookSection extends StatelessWidget {
       padding: EdgeInsets.zero,
       itemCount: booksList.length,
       shrinkWrap: true,
-      physics: const BouncingScrollPhysics(),
+      physics: NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         String firstLetter = booksList[index].bookName.substring(0, 1);
 
@@ -48,7 +113,7 @@ class AllBookSection extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 15),
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 15),
-            height: 68,
+            height: 70.px,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: kWhiteColor,
@@ -70,14 +135,17 @@ class AllBookSection extends StatelessWidget {
                         Text(
                           firstLetter,
                           style: kPoppinsSemiBold.copyWith(
-                              color: kWhiteColor,
-                              fontSize: Config.blockSizeHorizontal! * 5),
+                            color: kWhiteColor,
+                            fontSize: 18.px,
+                          ),
                         ),
                       ],
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 10),
+                        horizontal: 15,
+                        vertical: 10,
+                      ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -86,17 +154,17 @@ class AllBookSection extends StatelessWidget {
                             booksList[index].bookName,
                             style: kPoppinsSemiBold.copyWith(
                               color: kTextColor,
-                              fontSize: Config.blockSizeHorizontal! * 4,
+                              fontSize: 14.px,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 4,
                           ),
                           Text(
                             booksList[index].writerName,
                             style: kInterRegular.copyWith(
-                              color: Color(0xff353535).withOpacity(0.5),
-                              fontSize: Config.blockSizeHorizontal! * 3,
+                              color: const Color(0xff353535).withOpacity(0.5),
+                              fontSize: 12.px,
                             ),
                           ),
                         ],
@@ -105,8 +173,7 @@ class AllBookSection extends StatelessWidget {
                   ],
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -115,17 +182,17 @@ class AllBookSection extends StatelessWidget {
                         booksList[index].totalHadith.toString(),
                         style: kPoppinsSemiBold.copyWith(
                           color: kTextColor,
-                          fontSize: Config.blockSizeHorizontal! * 4,
+                          fontSize: 14.px,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 4,
                       ),
                       Text(
                         booksList[index].book,
                         style: kInterRegular.copyWith(
-                          color: Color(0xff353535).withOpacity(0.5),
-                          fontSize: Config.blockSizeHorizontal! * 3,
+                          color: const Color(0xff353535).withOpacity(0.5),
+                          fontSize: 12.px,
                         ),
                       ),
                     ],

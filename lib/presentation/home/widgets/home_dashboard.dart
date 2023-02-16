@@ -12,10 +12,9 @@ class HomeDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     Config().init(context);
     return Container(
-      height: Config.blockSizeVertical! * 14,
+      // height: Config.blockSizeVertical! * 14,
       //width: Config.blockSizeHorizontal! * 9,
       alignment: Alignment.center,
       padding: EdgeInsets.symmetric(

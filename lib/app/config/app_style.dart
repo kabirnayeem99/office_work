@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:office_work/app/config/config.dart';
 
 const Color kWhiteColor = Color(0xffffffff);
-const kLightWhiteColor = Color(0xffF1FCF9);
+const kDashboardColor = Color(0xffF1FCF9);
 const kLighterWhiteColor = Color(0xfffcfcfc);
 
 //

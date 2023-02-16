@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:office_work/core/assets/svg_path.dart';
 import 'package:office_work/presentation/home/widgets/sahih_hadith_slider.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../app/config/app_style.dart';
 import '../../../app/config/config.dart';
-import '../home_page.dart';
+
 import 'home_dashboard.dart';
 
 class HomePageUpperPart extends StatelessWidget {
@@ -22,13 +23,15 @@ class HomePageUpperPart extends StatelessWidget {
         Stack(
           children: [
             Container(
+              //height: Config.blockSizeHorizontal! * 150,
               height: Config.screenHeight! * .635,
-              //color: Colors.red,
+              // color: Colors.red,
             ),
             Image.asset(
               'assets/images/bg.png',
               fit: BoxFit.fill,
               width: double.infinity,
+              height: Config.screenHeight! / 2,
             ),
             Positioned(
               bottom: Config.blockSizeVertical! * 9,
@@ -53,7 +56,7 @@ class HomePageUpperPart extends StatelessWidget {
               ),
             ),
             _buildMenuButton(),
-            SahihHadithSlider(),
+            const SahihHadithSlider(),
             Positioned(
               bottom: Config.blockSizeVertical! * 3,
               left: 15,
@@ -84,7 +87,7 @@ class HomePageUpperPart extends StatelessWidget {
               'Al Hadith',
               style: kPoppinsBold.copyWith(
                 color: kWhiteColor,
-                fontSize: Config.blockSizeHorizontal! * 5,
+                fontSize: 20.px,
               ),
             ),
             SvgPicture.asset(

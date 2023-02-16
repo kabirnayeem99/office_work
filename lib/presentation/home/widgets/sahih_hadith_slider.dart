@@ -3,11 +3,12 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:office_work/app/config/app_style.dart';
 import 'package:office_work/data/model/sohih_hadith_model.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../app/config/config.dart';
 
 class SahihHadithSlider extends StatefulWidget {
-  SahihHadithSlider({
+  const SahihHadithSlider({
     super.key,
   });
 
@@ -54,7 +55,7 @@ class _SahihHadithSliderState extends State<SahihHadithSlider> {
                             maxLines: 5,
                             style: kHindiSiliguriSemiBold.copyWith(
                               color: kWhiteColor,
-                              fontSize: Config.blockSizeHorizontal! * 4,
+                              fontSize: 14.px,
                             ),
                           ),
                           SizedBox(
@@ -65,7 +66,7 @@ class _SahihHadithSliderState extends State<SahihHadithSlider> {
                             textAlign: TextAlign.justify,
                             style: kHindiSiliguriSemiBold.copyWith(
                               color: kWhiteColor,
-                              fontSize: Config.blockSizeHorizontal! * 4,
+                              fontSize: 14.px,
                             ),
                           ),
                         ],

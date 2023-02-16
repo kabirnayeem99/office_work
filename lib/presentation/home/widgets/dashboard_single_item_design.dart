@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../app/config/app_style.dart';
 import '../../../app/config/config.dart';
 
+// ignore: must_be_immutable
 class DashBoardSinngleItemDesign extends StatelessWidget {
   String svgPath;
   String title;
@@ -16,14 +18,13 @@ class DashBoardSinngleItemDesign extends StatelessWidget {
     Config().init(context);
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8),
+        padding: EdgeInsets.symmetric(horizontal: 8.px),
         child: Container(
-          // height: 90,
-          // width: 69,
-
+          height: 86.px,
+          width: 69.px,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: kLightWhiteColor,
+            color: kDashboardColor,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Column(
@@ -37,7 +38,7 @@ class DashBoardSinngleItemDesign extends StatelessWidget {
                 title,
                 style: kPoppinsSemiBold.copyWith(
                   color: kTextColor,
-                  fontSize: Config.blockSizeHorizontal! * 3,
+                  fontSize: 12.px,
                 ),
               ),
             ],
