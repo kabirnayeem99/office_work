@@ -5,7 +5,7 @@ import 'package:office_work/app/config/config.dart';
 const Color kWhiteColor = Color(0xffffffff);
 const kDashboardColor = Color(0xffF1FCF9);
 const kLighterWhiteColor = Color(0xfffcfcfc);
-
+const Color kScaffoldBackgroundColor = Color(0xffF4F4F4);
 
 //
 

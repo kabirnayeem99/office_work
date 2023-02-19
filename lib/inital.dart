@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:office_work/buisness_logic/controllers/theme_controller.dart';
+import 'package:office_work/presentation/config/light_theme.dart';
 import 'package:office_work/presentation/main/root.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -11,15 +14,19 @@ class Initial extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
-          statusBarBrightness: Brightness.dark),
+        statusBarColor: Color(0xff128A6D),
+        statusBarBrightness: Brightness.dark,
+      ),
     );
 
+    final ThemeController themeController = Get.put(ThemeController());
+
     return ResponsiveSizer(builder: (context, orientation, screenType) {
-      return const MaterialApp(
+      return GetMaterialApp(
         debugShowCheckedModeBanner: false,
+        theme: hadithLightTheme,
         title: 'Flutter Demo',
-        home: MainPage(),
+        home: const MainPage(),
       );
     });
   }

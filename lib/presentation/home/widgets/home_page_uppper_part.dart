@@ -22,7 +22,7 @@ class HomePageUpperPart extends StatelessWidget {
           children: [
             Container(
               //height: Config.blockSizeHorizontal! * 150,
-              height: Config.screenHeight! * .635,
+              height: Config.screenHeight! * .58,
               // color: Colors.red,
             ),
             Container(
@@ -51,9 +51,10 @@ class HomePageUpperPart extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: Config.blockSizeVertical! * 9,
+              // bottom: Config.blockSizeVertical! * 13,
               left: 0,
               right: 0,
+              top: Config.screenHeight! / 3.9,
               child: ClipRRect(
                 borderRadius:
                     const BorderRadius.vertical(bottom: Radius.circular(28)),
@@ -68,9 +69,9 @@ class HomePageUpperPart extends StatelessWidget {
             _buildMenuButton(),
             const SahihHadithSlider(),
             Positioned(
-              bottom: Config.blockSizeVertical! * 3,
-              left: 15,
-              right: 15,
+              top: Config.screenHeight! / 2.4.px,
+              left: 15.px,
+              right: 15.px,
               child: const HomeDashboard(),
             ),
           ],

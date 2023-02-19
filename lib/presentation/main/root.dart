@@ -57,8 +57,8 @@ class _MainPageState extends State<MainPage> {
         icon,
         colorFilter: ColorFilter.mode(
             homeController.currentIndex.value == index
-                ? Color.fromARGB(248, 0, 215, 165)
-                : Color(0x0000FAFA),
+                ? const Color.fromARGB(248, 0, 215, 165)
+                : const Color(0x0000FAFA),
             BlendMode.srcATop),
       ),
     );

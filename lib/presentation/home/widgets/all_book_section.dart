@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:office_work/presentation/home/widgets/add_to_hifz_dialog.dart';
 import 'package:office_work/presentation/home/widgets/bookList.dart';
+import 'package:office_work/presentation/home/widgets/edit_plan_dialog.dart';
+import 'package:office_work/presentation/home/widgets/more_options_bottom_sheet.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../app/config/app_style.dart';
 import '../../../app/config/config.dart';
-import '../../../data/model/books_model.dart';
 
 // ignore: must_be_immutable
 class AllBookSection extends StatelessWidget {
@@ -28,7 +30,7 @@ class AllBookSection extends StatelessWidget {
           ),
         ),
         ListView.builder(
-          padding: EdgeInsets.only(bottom: 72.px),
+          padding: EdgeInsets.only(bottom: 72.px, top: 14.px),
           itemCount: booksList.length,
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
@@ -37,93 +39,119 @@ class AllBookSection extends StatelessWidget {
 
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 6),
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                height: 70.px,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: kWhiteColor,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              booksList[index].icon,
-                            ),
-                            Text(
-                              firstLetter,
-                              style: kPoppinsSemiBold.copyWith(
-                                color: kWhiteColor,
-                                fontSize: 18.px,
-                              ),
-                            ),
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 15,
-                            vertical: 10,
+              child: InkWell(
+                onTap: () {
+                  print(index);
+                  index == 0
+                      ? Get.bottomSheet(
+                          const ShowMoreOptionBottomSheetForEditPlan(),
+                          backgroundColor:
+                              Theme.of(context).dialogBackgroundColor,
+                          isDismissible: false,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(20.px)),
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
+                          enableDrag: false,
+                        )
+                      : index == 1
+                          ? Get.dialog(
+                              const AddToHifzDialog(),
+                            )
+                          : index == 2
+                              ? Get.dialog(
+                                  const EditPlanDialog(),
+                                )
+                              : null;
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  height: 70.px,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: kWhiteColor,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Stack(
+                            alignment: Alignment.center,
                             children: [
-                              Text(
-                                booksList[index].bookName,
-                                style: kPoppinsSemiBold.copyWith(
-                                  color: kTextColor,
-                                  fontSize: 14.px,
-                                ),
+                              SvgPicture.asset(
+                                booksList[index].icon,
                               ),
-                              const SizedBox(height: 4),
                               Text(
-                                booksList[index].writerName,
-                                style: kInterRegular.copyWith(
-                                  color:
-                                      const Color(0xff353535).withOpacity(0.5),
-                                  fontSize: 12.px,
+                                firstLetter,
+                                style: kPoppinsSemiBold.copyWith(
+                                  color: kWhiteColor,
+                                  fontSize: 18.px,
                                 ),
                               ),
                             ],
                           ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            booksList[index].totalHadith.toString(),
-                            style: kPoppinsSemiBold.copyWith(
-                              color: kTextColor,
-                              fontSize: 14.px,
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 15,
+                              vertical: 10,
                             ),
-                          ),
-                          const SizedBox(
-                            height: 4,
-                          ),
-                          Text(
-                            booksList[index].book,
-                            style: kInterRegular.copyWith(
-                              color: const Color(0xff353535).withOpacity(0.5),
-                              fontSize: 12.px,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  booksList[index].bookName,
+                                  style: kPoppinsSemiBold.copyWith(
+                                    color: kTextColor,
+                                    fontSize: 14.px,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  booksList[index].writerName,
+                                  style: kInterRegular.copyWith(
+                                    color: const Color(0xff353535)
+                                        .withOpacity(0.5),
+                                    fontSize: 12.px,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              booksList[index].totalHadith.toString(),
+                              style: kPoppinsSemiBold.copyWith(
+                                color: kTextColor,
+                                fontSize: 14.px,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 4,
+                            ),
+                            Text(
+                              booksList[index].book,
+                              style: kInterRegular.copyWith(
+                                color: const Color(0xff353535).withOpacity(0.5),
+                                fontSize: 12.px,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             );
