@@ -93,6 +93,27 @@ class AllBookSection extends StatelessWidget {
       totalHadith: 5235,
       book: 'Hadith',
     ),
+    BooksModel(
+      icon: 'assets/images/green_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
+    BooksModel(
+      icon: 'assets/images/blue_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
+    BooksModel(
+      icon: 'assets/images/red_polygon.svg',
+      bookName: 'Book Name',
+      writerName: 'Writer Name',
+      totalHadith: 5235,
+      book: 'Hadith',
+    ),
   ];
   AllBookSection({
     super.key,
@@ -102,10 +123,10 @@ class AllBookSection extends StatelessWidget {
   Widget build(BuildContext context) {
     Config().init(context);
     return ListView.builder(
-      padding: EdgeInsets.zero,
+      padding: EdgeInsets.only(bottom: 72.px),
       itemCount: booksList.length,
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         String firstLetter = booksList[index].bookName.substring(0, 1);
 

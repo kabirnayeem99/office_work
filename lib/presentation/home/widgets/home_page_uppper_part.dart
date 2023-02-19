@@ -52,6 +52,8 @@ class HomePageUpperPart extends StatelessWidget {
                 child: Image.asset(
                   'assets/images/bg_bottom.png',
                   width: double.infinity,
+                  // fit: BoxFit.fill,
+                  //height: Config.blockSizeVertical! * 30,
                 ),
               ),
             ),

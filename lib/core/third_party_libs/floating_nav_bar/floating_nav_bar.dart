@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:office_work/core/third_party_libs/floating_nav_bar/floating_nav_bar_item.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-typedef Widget ItemBuilder(
+typedef ItemBuilder = Widget Function(
     BuildContext context, int index, FloatingNavbarItem items);
 
 class FloatingNavbar extends StatefulWidget {
@@ -45,7 +45,7 @@ class FloatingNavbar extends StatefulWidget {
         assert(items.length <= 5),
         assert(currentIndex <= items.length),
         assert(width > 50),
-        this.itemBuilder = itemBuilder ??
+        itemBuilder = itemBuilder ??
             _defaultItemBuilder(
               unselectedItemColor: unselectedItemColor,
               selectedItemColor: selectedItemColor,

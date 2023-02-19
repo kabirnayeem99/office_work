@@ -29,7 +29,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     Config().init(context);
     return Scaffold(
-      body: HomePage(),
+      body: const HomePage(),
       backgroundColor: const Color(0xffF4F4F4),
       extendBody: true,
       bottomNavigationBar: FloatingNavbar(

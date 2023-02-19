@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffF4F4F4),
       body: SingleChildScrollView(
-        physics: ScrollPhysics(),
+        physics: const ScrollPhysics(),
         child: Column(
           children: [
             const HomePageUpperPart(),
