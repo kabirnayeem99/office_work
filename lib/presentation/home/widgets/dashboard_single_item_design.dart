@@ -9,9 +9,14 @@ import '../../../app/config/config.dart';
 class DashBoardSinngleItemDesign extends StatelessWidget {
   String svgPath;
   String title;
+  VoidCallback? onTap;
 
-  DashBoardSinngleItemDesign(
-      {super.key, required this.svgPath, required this.title});
+  DashBoardSinngleItemDesign({
+    super.key,
+    required this.svgPath,
+    required this.title,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,29 +24,32 @@ class DashBoardSinngleItemDesign extends StatelessWidget {
     return Expanded(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.px),
-        child: Container(
-          height: 86.px,
-          width: 69.px,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: kDashboardColor,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SvgPicture.asset(svgPath),
-              const SizedBox(
-                height: 10,
-              ),
-              Text(
-                title,
-                style: kPoppinsSemiBold.copyWith(
-                  color: kTextColor,
-                  fontSize: 12.px,
+        child: InkWell(
+           onTap: onTap,
+          child: Container(
+            height: 86.px,
+            width: 69.px,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: kDashboardColor,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SvgPicture.asset(svgPath),
+                const SizedBox(
+                  height: 10,
                 ),
-              ),
-            ],
+                Text(
+                  title,
+                  style: kPoppinsSemiBold.copyWith(
+                    color: kTextColor,
+                    fontSize: 12.px,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

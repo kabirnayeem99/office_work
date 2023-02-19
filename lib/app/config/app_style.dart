@@ -6,6 +6,7 @@ const Color kWhiteColor = Color(0xffffffff);
 const kDashboardColor = Color(0xffF1FCF9);
 const kLighterWhiteColor = Color(0xfffcfcfc);
 
+
 //
 
 const Color kTextColor = Color(0xff5D646F);
@@ -15,7 +16,7 @@ const kBlueColor = Color(0xff5474FD);
 const kLightBlueColor = Color(0xff83b1ff);
 const kLighterBlueColor = Color(0xffc1d4f9);
 
-const kDarkBlueColor = Color(0xff19202d);
+const kDarkBlueColor = Color(0xff35414D);
 
 final double kPaddingHorizontal = Config.blockSizeHorizontal! * 6;
 const double horizontalPadding = 40.0;
