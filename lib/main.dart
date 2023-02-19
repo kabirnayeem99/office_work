@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
-import 'package:office_work/presentation/main/main_page.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
+import 'inital.dart';
 
 void main() {
+  runApp(const Initial());
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:office_work/app/config/app_style.dart';
+import 'package:office_work/app/config/config.dart';
 import 'package:office_work/core/assets/svg_path.dart';
 import 'package:office_work/presentation/home/widgets/sahih_hadith_slider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-
-import '../../../app/config/app_style.dart';
-import '../../../app/config/config.dart';
-
 import 'home_dashboard.dart';
 
 class HomePageUpperPart extends StatelessWidget {
@@ -27,11 +25,21 @@ class HomePageUpperPart extends StatelessWidget {
               height: Config.screenHeight! * .635,
               // color: Colors.red,
             ),
-            Image.asset(
-              'assets/images/bg.png',
-              fit: BoxFit.fill,
+            Container(
               width: double.infinity,
               height: Config.screenHeight! / 2,
+              decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Color(0xff0f8569),
+                        Color(0xff2ab795),
+                      ]),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(7.w),
+                    bottomRight: Radius.circular(7.w),
+                  )),
             ),
             Positioned(
               bottom: Config.blockSizeVertical! * 9,
