@@ -21,22 +21,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             const HomePageUpperPart(),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Text(
-                  'All Hadith Book',
-                  style: kPoppinsBold.copyWith(
-                    fontSize: 15.px,
-                    color: kTextColor,
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 7,
-            ),
+            const SizedBox(height: 7),
             AllBookSection(),
           ],
         ),
