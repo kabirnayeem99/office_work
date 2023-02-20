@@ -5,8 +5,8 @@ import 'package:office_work/presentation/bookmark/widgets/bookmark_list.dart';
 import 'package:office_work/presentation/config/hadith_colors.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class Bookmark extends StatelessWidget {
-  const Bookmark({super.key});
+class LastReadPage extends StatelessWidget {
+
 
   @override
   Widget build(BuildContext context) {

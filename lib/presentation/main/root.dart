@@ -5,7 +5,8 @@ import 'package:office_work/app/config/app_style.dart';
 import 'package:office_work/app/config/config.dart';
 import 'package:office_work/buisness_logic/controllers/home_controller.dart';
 import 'package:office_work/core/assets/svg_path.dart';
-import 'package:office_work/presentation/bookmark/bookmark.dart';
+
+import 'package:office_work/presentation/last_read/last__read_page.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../core/third_party_libs/floating_nav_bar/floating_nav_bar.dart';
@@ -25,7 +26,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     Config().init(context);
     return Scaffold(
-      body: const Bookmark(),
+      body: LastReadPage(),
       backgroundColor: const Color(0xffF4F4F4),
       extendBody: true,
       bottomNavigationBar: Obx(
