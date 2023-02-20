@@ -1,5 +1,3 @@
-
-
 import 'dart:ui';
 
 class HadithColors {
@@ -32,6 +30,9 @@ class HadithColors {
 
   // Mint cream
   static const Color mintCream = Color(0xfff1fcf9);
+
+  // Ghost White
+  static const Color ghostWhite = Color(0xffF7F8FA);
 
   // Green (Crayola)
   static const Color greenCrayola = Color(0xff1AA483);

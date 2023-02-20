@@ -19,4 +19,14 @@ class SvgPath {
   static const String icEdit = 'assets/images/edit_icon.svg';
   static const String icDelete = 'assets/images/delete_icon.svg';
   static const String icDownArrow = 'assets/images/down_arrow.svg';
+  static const String icFacebook = 'assets/images/facebook_icon.svg';
+  static const String icTwitter = 'assets/images/twitter_icon.svg';
+  static const String icLinkdin = 'assets/images/linkedin_icon.svg';
+  static const String icPinterest = 'assets/images/pinterest_icon.svg';
+  static const String icRedFolder = 'assets/images/folder_red_icon.svg';
+  static const String icGreenFolder = 'assets/images/folder_green_icon.svg';
+  static const String icYellowFolder = 'assets/images/folder_yellow_icon.svg';
+  static const String icPurpleFolder = 'assets/images/folder_purple_icon .svg';
+  static const String icSign = 'assets/images/sign_icon.svg';
+  static const String icVirticalMore = 'assets/images/vertical_more_icon.svg';
 }

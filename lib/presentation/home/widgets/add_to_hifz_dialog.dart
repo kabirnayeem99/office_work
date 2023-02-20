@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:office_work/app/config/app_style.dart';
 import 'package:office_work/app/config/config.dart';
 import 'package:office_work/core/assets/svg_path.dart';
+import 'package:office_work/core/util/util.dart';
 import 'package:office_work/presentation/common/action_button.dart';
 import 'package:office_work/presentation/common/default_input_decoration.dart';
 import 'package:office_work/presentation/config/hadith_colors.dart';
@@ -16,16 +17,15 @@ class AddToHifzDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Config().init(context);
-    return AlertDialog(
-      backgroundColor: kWhiteColor,
+    return Dialog(
       elevation: 0,
-      contentPadding: EdgeInsets.symmetric(horizontal: 15.px, vertical: 20.px),
-      buttonPadding: EdgeInsets.zero,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
-      content: SizedBox(
-        width: Config.screenWidth! - 5.px,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.px)),
+      insetPadding: EdgeInsets.symmetric(horizontal: 18.px),
+      //backgroundColor: Colors.transparent,
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 15.px, vertical: 20.px),
+        decoration: const BoxDecoration(),
+        width: HadithScreen.width() * 1,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -40,7 +40,7 @@ class AddToHifzDialog extends StatelessWidget {
             ),
             SizedBox(height: 24.px),
             Container(
-              alignment: Alignment.center,
+              alignment: Alignment.centerLeft,
               child: TextField(
                 decoration: defaultInputDecoration(
                   context: context,

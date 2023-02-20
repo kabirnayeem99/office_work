@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:office_work/presentation/home/widgets/add_to_bookmark_dialog.dart';
 import 'package:office_work/presentation/home/widgets/add_to_hifz_dialog.dart';
 import 'package:office_work/presentation/home/widgets/bookList.dart';
 import 'package:office_work/presentation/home/widgets/edit_plan_dialog.dart';
 import 'package:office_work/presentation/home/widgets/more_options_bottom_sheet.dart';
+import 'package:office_work/presentation/home/widgets/remove_modal.dart';
+import 'package:office_work/presentation/home/widgets/share_post_dialog.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../app/config/app_style.dart';
@@ -62,7 +65,13 @@ class AllBookSection extends StatelessWidget {
                               ? Get.dialog(
                                   const EditPlanDialog(),
                                 )
-                              : null;
+                              : index == 3
+                                  ? Get.dialog(const SharePostDialog())
+                                  : index == 4
+                                      ? Get.dialog(AddToBookmarkDialog())
+                                      : index == 5
+                                          ? Get.dialog(const RemoveModal())
+                                          : null;
                 },
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 15),

@@ -1,4 +1,4 @@
-import 'package:office_work/data/model/books_model.dart';
+import 'package:office_work/data/model/book_model.dart';
 
 List<BooksModel> booksList = [
   BooksModel(

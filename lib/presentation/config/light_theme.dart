@@ -55,7 +55,7 @@ final ThemeData hadithLightTheme = ThemeData(
       brightness: Brightness.light,
     ),
   ),
-  fontFamily: GoogleFonts.notoSerifBengali().fontFamily,
+  fontFamily: GoogleFonts.poppins().fontFamily,
   inputDecorationTheme: const InputDecorationTheme(
     labelStyle: TextStyle(
       color: Color(0xdd000000),

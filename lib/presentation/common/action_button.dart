@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:office_work/app/config/app_style.dart';
 import 'package:office_work/presentation/config/hadith_colors.dart';
 
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -11,7 +10,7 @@ class ActionButton extends StatelessWidget {
     this.isFocused = true,
     required this.height,
     required this.width,
-    this.padding = const EdgeInsets.symmetric(horizontal: 34.5, vertical: 17),
+    this.padding = const EdgeInsets.symmetric(horizontal: 34.5, vertical: 14),
     required this.onTap,
   });
 
@@ -30,7 +29,7 @@ class ActionButton extends StatelessWidget {
         alignment: Alignment.center,
         padding: padding,
         width: width,
-        //height: height,
+        height: height,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.px),
           color: isFocused
@@ -40,12 +39,17 @@ class ActionButton extends StatelessWidget {
         child: Center(
           child: Text(
             buttonText,
-            style: kPoppinsSemiBold.copyWith(
+            style: TextStyle(
               fontSize: 14.px,
               color: isFocused
                   ? Theme.of(context).colorScheme.onBackground
                   : HadithColors.blackOlive,
+              fontWeight: FontWeight.w500,
             ),
+            // style: kPoppinsSemiBold.copyWith(
+            //   fontSize: 14.px,
+
+            // ),
           ),
         ),
       ),

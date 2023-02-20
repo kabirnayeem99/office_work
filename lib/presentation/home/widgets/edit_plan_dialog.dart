@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:office_work/app/config/app_style.dart';
-import 'package:office_work/app/config/config.dart';
+import 'package:office_work/core/util/util.dart';
 import 'package:office_work/presentation/common/action_button.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -12,17 +12,15 @@ class EditPlanDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Config().init(context);
-    return AlertDialog(
-      backgroundColor: kWhiteColor,
+    return Dialog(
       elevation: 0,
-      contentPadding: EdgeInsets.symmetric(horizontal: 15.px, vertical: 24.px),
-      buttonPadding: EdgeInsets.zero,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.px),
-      ),
-      content: SizedBox(
-        width: Config.screenWidth! - 5.px,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.px)),
+      insetPadding: EdgeInsets.symmetric(horizontal: 18.px),
+      //backgroundColor: Colors.transparent,
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 15.px, vertical: 20.px),
+        decoration: const BoxDecoration(),
+        width: HadithScreen.width() * 1,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -59,9 +57,9 @@ class EditPlanDialog extends StatelessWidget {
               children: [
                 ActionButton(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 34.px, vertical: 15.px),
+                      EdgeInsets.symmetric(horizontal: 34.px, vertical: 10.px),
                   buttonText: 'Cancel',
-                  height: 48.px,
+                  height: 45.px,
                   width: 120.px,
                   onTap: () {
                     Get.back();
@@ -73,9 +71,9 @@ class EditPlanDialog extends StatelessWidget {
                 ),
                 ActionButton(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 34.px, vertical: 15.px),
+                      EdgeInsets.symmetric(horizontal: 34.px, vertical: 10.px),
                   buttonText: 'Apply',
-                  height: 48.px,
+                  height: 45.px,
                   width: 120.px,
                   onTap: () {
                     Get.back();

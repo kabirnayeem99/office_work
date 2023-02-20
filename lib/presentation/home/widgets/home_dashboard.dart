@@ -10,7 +10,16 @@ import '../../../core/assets/svg_path.dart';
 import 'dashboard_single_item_design.dart';
 
 class HomeDashboard extends StatelessWidget {
-  const HomeDashboard({
+  String? _selectedItem;
+
+  final List<String> _items = [
+    'Item 1',
+    'Item 2',
+    'Item 3',
+    'Item 4',
+    'Item 5',
+  ];
+  HomeDashboard({
     super.key,
   });
 

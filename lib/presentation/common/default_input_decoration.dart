@@ -9,6 +9,7 @@ InputDecoration defaultInputDecoration({
   required BuildContext context,
   required String hintText,
   String suffixIconPath = "",
+  String prefixIconPath = "",
   bool hintBold = false,
 }) {
   return InputDecoration(
@@ -49,7 +50,10 @@ InputDecoration defaultInputDecoration({
     hintText: hintText,
     hintStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
           color: HadithColors.blackCoral,
-          fontWeight: hintBold ? FontWeight.w600 : FontWeight.w500,
+          fontWeight: FontWeight.w500,
+          fontSize: 14.px,
+
+          // fontFamily: GoogleFonts.poppins().fontFamily,
         ),
     suffixIcon: SizedBox(
       height: 18.px,
@@ -60,6 +64,17 @@ InputDecoration defaultInputDecoration({
         width: 18.px,
         fit: BoxFit.scaleDown,
         colorFilter: buildColorFilterToChangeColor(HadithColors.blueUCLABlue),
+      ),
+    ),
+    prefixIcon: SizedBox(
+      height: 18.px,
+      width: 18.px,
+      child: SvgPicture.asset(
+        prefixIconPath,
+        height: 18.px,
+        width: 18.px,
+        fit: BoxFit.scaleDown,
+        //colorFilter: buildColorFilterToChangeColor(HadithColors.blueUCLABlue),
       ),
     ),
   );

@@ -44,30 +44,37 @@ class ShowMoreOptionBottomSheet extends StatelessWidget {
               BottomSheetRow(
                 svgPath: SvgPath.icBookmark,
                 title: 'Remove From Bookmark',
+                onTap: () {},
               ),
               BottomSheetRow(
                 svgPath: SvgPath.icAdd,
                 title: 'Add Hifz',
+                onTap: () {},
               ),
               BottomSheetRow(
                 svgPath: SvgPath.icCopy,
                 title: 'Bangla Copy',
+                onTap: () {},
               ),
               BottomSheetRow(
                 svgPath: SvgPath.icCopy,
                 title: 'English Copy',
+                onTap: () {},
               ),
               BottomSheetRow(
                 svgPath: SvgPath.icCopy,
                 title: 'Arabic Copy',
+                onTap: () {},
               ),
               BottomSheetRow(
                 svgPath: SvgPath.icShare,
                 title: 'Share',
+                onTap: () {},
               ),
               BottomSheetRow(
                 svgPath: SvgPath.icExclamation,
                 title: 'Report',
+                onTap: () {},
               ),
             ],
           ),
@@ -111,33 +118,47 @@ class ShowMoreOptionBottomSheetForAddBookMark extends StatelessWidget {
               SizedBox(
                 height: 17.px,
               ),
-              BottomSheetRow(
+               BottomSheetRow(
                 svgPath: SvgPath.icCopy,
-                title: 'Bangla Copy',
+                title: 'Bangla Copy', onTap: () {
+                  
+                },
               ),
-              BottomSheetRow(
+               BottomSheetRow(
                 svgPath: SvgPath.icCopy,
-                title: 'English Copy',
+                title: 'English Copy', onTap: () {
+                  
+                },
               ),
-              BottomSheetRow(
+               BottomSheetRow(
                 svgPath: SvgPath.icCopy,
-                title: 'Arabic Copy',
+                title: 'Arabic Copy', onTap: () {
+                  
+                },
               ),
-              BottomSheetRow(
+               BottomSheetRow(
                 svgPath: SvgPath.icAdd,
-                title: 'Add Hifz',
+                title: 'Add Hifz', onTap: () {
+                  
+                },
               ),
-              BottomSheetRow(
+               BottomSheetRow(
                 svgPath: SvgPath.icBookmark,
-                title: 'Add to Bookmark',
+                title: 'Add to Bookmark', onTap: () {
+                  
+                },
               ),
-              BottomSheetRow(
+               BottomSheetRow(
                 svgPath: SvgPath.icShare,
-                title: 'Share',
+                title: 'Share', onTap: () {
+                  
+                },
               ),
-              BottomSheetRow(
+               BottomSheetRow(
                 svgPath: SvgPath.icExclamation,
-                title: 'Report',
+                title: 'Report', onTap: () {
+                  
+                },
               ),
             ],
           ),
@@ -184,10 +205,12 @@ class ShowMoreOptionBottomSheetForEditBookmark extends StatelessWidget {
               BottomSheetRow(
                 svgPath: SvgPath.icEdit,
                 title: 'Edit Bookmark',
+                onTap: () {},
               ),
               BottomSheetRow(
                 svgPath: SvgPath.icDelete,
                 title: 'Delete Bookmark',
+                onTap: () {},
               ),
             ],
           ),
@@ -196,6 +219,7 @@ class ShowMoreOptionBottomSheetForEditBookmark extends StatelessWidget {
     );
   }
 }
+
 //this section for Edit plan
 class ShowMoreOptionBottomSheetForEditPlan extends StatelessWidget {
   const ShowMoreOptionBottomSheetForEditPlan({
@@ -233,10 +257,12 @@ class ShowMoreOptionBottomSheetForEditPlan extends StatelessWidget {
               BottomSheetRow(
                 svgPath: SvgPath.icEdit,
                 title: 'Edit Plan',
+                onTap: () {},
               ),
               BottomSheetRow(
                 svgPath: SvgPath.icDelete,
                 title: 'Delete Plan',
+                onTap: () {},
               ),
             ],
           ),
@@ -247,32 +273,37 @@ class ShowMoreOptionBottomSheetForEditPlan extends StatelessWidget {
 }
 
 class BottomSheetRow extends StatelessWidget {
-  String svgPath;
-  String title;
-  BottomSheetRow({
+  final String svgPath;
+  final String title;
+  final VoidCallback onTap;
+  const BottomSheetRow({
     super.key,
     required this.svgPath,
     required this.title,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(bottom: 20.px),
-      child: Row(
-        children: [
-          SvgPicture.asset(svgPath),
-          SizedBox(
-            width: 16.px,
-          ),
-          Text(
-            title,
-            style: kPoppinsSemiBold.copyWith(
-              color: kTextColor,
-              fontSize: 13.px,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Row(
+          children: [
+            SvgPicture.asset(svgPath),
+            SizedBox(
+              width: 16.px,
             ),
-          )
-        ],
+            Text(
+              title,
+              style: kPoppinsSemiBold.copyWith(
+                color: kTextColor,
+                fontSize: 13.px,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
