@@ -4,6 +4,9 @@ import 'package:get/get.dart';
 import 'package:office_work/app/config/app_style.dart';
 import 'package:office_work/app/config/config.dart';
 import 'package:office_work/core/assets/svg_path.dart';
+import 'package:office_work/presentation/bookmark/widgets/bookmark_list.dart';
+import 'package:office_work/presentation/home/widgets/edit_bookmark_dialog.dart';
+import 'package:office_work/presentation/home/widgets/edit_plan_dialog.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 //this section for remove from bookmark
@@ -118,47 +121,40 @@ class ShowMoreOptionBottomSheetForAddBookMark extends StatelessWidget {
               SizedBox(
                 height: 17.px,
               ),
-               BottomSheetRow(
+              BottomSheetRow(
                 svgPath: SvgPath.icCopy,
-                title: 'Bangla Copy', onTap: () {
-                  
-                },
+                title: 'Bangla Copy',
+                onTap: () {},
               ),
-               BottomSheetRow(
+              BottomSheetRow(
                 svgPath: SvgPath.icCopy,
-                title: 'English Copy', onTap: () {
-                  
-                },
+                title: 'English Copy',
+                onTap: () {},
               ),
-               BottomSheetRow(
+              BottomSheetRow(
                 svgPath: SvgPath.icCopy,
-                title: 'Arabic Copy', onTap: () {
-                  
-                },
+                title: 'Arabic Copy',
+                onTap: () {},
               ),
-               BottomSheetRow(
+              BottomSheetRow(
                 svgPath: SvgPath.icAdd,
-                title: 'Add Hifz', onTap: () {
-                  
-                },
+                title: 'Add Hifz',
+                onTap: () {},
               ),
-               BottomSheetRow(
+              BottomSheetRow(
                 svgPath: SvgPath.icBookmark,
-                title: 'Add to Bookmark', onTap: () {
-                  
-                },
+                title: 'Add to Bookmark',
+                onTap: () {},
               ),
-               BottomSheetRow(
+              BottomSheetRow(
                 svgPath: SvgPath.icShare,
-                title: 'Share', onTap: () {
-                  
-                },
+                title: 'Share',
+                onTap: () {},
               ),
-               BottomSheetRow(
+              BottomSheetRow(
                 svgPath: SvgPath.icExclamation,
-                title: 'Report', onTap: () {
-                  
-                },
+                title: 'Report',
+                onTap: () {},
               ),
             ],
           ),
@@ -205,7 +201,10 @@ class ShowMoreOptionBottomSheetForEditBookmark extends StatelessWidget {
               BottomSheetRow(
                 svgPath: SvgPath.icEdit,
                 title: 'Edit Bookmark',
-                onTap: () {},
+                onTap: () {
+                  Get.back();
+                  Get.dialog(const EditBookmarkDialog());
+                },
               ),
               BottomSheetRow(
                 svgPath: SvgPath.icDelete,
@@ -257,7 +256,10 @@ class ShowMoreOptionBottomSheetForEditPlan extends StatelessWidget {
               BottomSheetRow(
                 svgPath: SvgPath.icEdit,
                 title: 'Edit Plan',
-                onTap: () {},
+                onTap: () {
+                  Get.back();
+                  Get.dialog(const EditPlanDialog());
+                },
               ),
               BottomSheetRow(
                 svgPath: SvgPath.icDelete,

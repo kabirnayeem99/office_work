@@ -61,7 +61,7 @@ class CreatePlanDialog extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(horizontal: 34.px, vertical: 10.px),
                   buttonText: 'Cancel',
-                  height: 45.px,
+                  height: 48.px,
                   width: 120.px,
                   onTap: () {
                     Get.back();
@@ -75,7 +75,7 @@ class CreatePlanDialog extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(horizontal: 34.px, vertical: 10.px),
                   buttonText: 'Apply',
-                  height: 45.px,
+                  height: 48.px,
                   width: 120.px,
                   onTap: () {},
                   isFocused: true,

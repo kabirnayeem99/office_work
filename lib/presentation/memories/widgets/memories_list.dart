@@ -1,0 +1,77 @@
+import 'package:office_work/core/assets/svg_path.dart';
+import 'package:office_work/data/model/memories_model.dart';
+
+List<MemoriesModel> memoriesList = [
+  MemoriesModel(
+    planNo: 1,
+    totalHadith: 2,
+    remainingDays: 0,
+    completedhadith: '2/3',
+    completed: 46,
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  MemoriesModel(
+    planNo: 2,
+    totalHadith: 0,
+    remainingDays: 5,
+    completedhadith: '0',
+    completed: 0,
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  MemoriesModel(
+    planNo: 3,
+    totalHadith: 2,
+    remainingDays: 5,
+    completedhadith: '2/3',
+    completed: 75,
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  MemoriesModel(
+    planNo: 4,
+    totalHadith: 2,
+    remainingDays: 0,
+    completedhadith: '2/3',
+    completed: 68,
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  MemoriesModel(
+    planNo: 5,
+    totalHadith: 0,
+    remainingDays: 5,
+    completedhadith: '0',
+    completed: 0,
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  MemoriesModel(
+    planNo: 6,
+    totalHadith: 2,
+    remainingDays: 5,
+    completedhadith: '2/3',
+    completed: 45,
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  MemoriesModel(
+    planNo: 7,
+    totalHadith: 2,
+    remainingDays: 0,
+    completedhadith: '2/3',
+    completed: 65,
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  MemoriesModel(
+    planNo: 8,
+    totalHadith: 0,
+    remainingDays: 5,
+    completedhadith: '0',
+    completed: 59,
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  MemoriesModel(
+    planNo: 9,
+    totalHadith: 2,
+    remainingDays: 5,
+    completedhadith: '2/3',
+    completed: 75,
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+];

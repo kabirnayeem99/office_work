@@ -91,8 +91,13 @@ class AllBookSection extends StatelessWidget {
                           Stack(
                             alignment: Alignment.center,
                             children: [
+
+                              
                               SvgPicture.asset(
                                 booksList[index].icon,
+                              colorFilter: ColorFilter.mode(
+                                  booksList[index].iconColor,
+                                  BlendMode.srcATop),
                               ),
                               Text(
                                 firstLetter,

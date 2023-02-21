@@ -74,4 +74,28 @@ List<BookmarkModel> bookmarkList = [
     subTitle: '4 Bookmarked',
     optionIconPath: SvgPath.icVirticalMore,
   ),
+  BookmarkModel(
+    iconPath: SvgPath.icRedFolder,
+    title: 'Bookmark Name',
+    subTitle: '4 Bookmarked',
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  BookmarkModel(
+    iconPath: SvgPath.icYellowFolder,
+    title: 'Bookmark Name',
+    subTitle: '4 Bookmarked',
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  BookmarkModel(
+    iconPath: SvgPath.icGreenFolder,
+    title: 'Bookmark Name',
+    subTitle: '4 Bookmarked',
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
+  BookmarkModel(
+    iconPath: SvgPath.icPurpleFolder,
+    title: 'Bookmark Name',
+    subTitle: '4 Bookmarked',
+    optionIconPath: SvgPath.icVirticalMore,
+  ),
 ];

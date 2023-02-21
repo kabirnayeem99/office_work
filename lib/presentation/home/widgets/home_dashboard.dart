@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:office_work/presentation/home/widgets/create_plan_dialog.dart';
+import 'package:office_work/presentation/home/widgets/edit_bookmark_dialog.dart';
 import 'package:office_work/presentation/home/widgets/more_options_bottom_sheet.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -47,7 +47,7 @@ class HomeDashboard extends StatelessWidget {
             title: 'Last',
             onTap: () {
               Get.dialog(
-                const CreatePlanDialog(),
+                EditBookmarkDialog(),
               );
             },
           ),

@@ -29,4 +29,5 @@ class SvgPath {
   static const String icPurpleFolder = 'assets/images/folder_purple_icon .svg';
   static const String icSign = 'assets/images/sign_icon.svg';
   static const String icVirticalMore = 'assets/images/vertical_more_icon.svg';
+  static const String icPolygon = 'assets/images/blue_polygon.svg';
 }
