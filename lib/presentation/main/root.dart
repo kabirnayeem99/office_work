@@ -5,7 +5,6 @@ import 'package:office_work/app/config/app_style.dart';
 import 'package:office_work/app/config/config.dart';
 import 'package:office_work/buisness_logic/controllers/home_controller.dart';
 import 'package:office_work/core/assets/svg_path.dart';
-import 'package:office_work/presentation/about_writer/about_writer_page.dart';
 import 'package:office_work/presentation/bookmark/bookmark_page.dart';
 import 'package:office_work/presentation/home/home_page.dart';
 import 'package:office_work/presentation/last_read/last_read_page.dart';
@@ -32,7 +31,7 @@ class _MainPageState extends State<MainPage> {
     const BookmarkPage(),
     const ShowMemoriesPage(),
     const LastReadPage(),
-    const AboutWriterPage(),
+    const PublicationsPage(),
   ];
 
   @override
@@ -61,7 +60,7 @@ class _MainPageState extends State<MainPage> {
           currentIndex: homeController.currentIndex.value,
           onTap: (index) {
             homeController.currentIndex.value = index;
-            print(homeController.currentIndex.value.toString());
+           
           },
         ),
       ),

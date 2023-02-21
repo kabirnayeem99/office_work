@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:office_work/app/config/app_style.dart';
 import 'package:office_work/app/config/config.dart';
 import 'package:office_work/core/assets/svg_path.dart';
-import 'package:office_work/presentation/bookmark/widgets/bookmark_list.dart';
 import 'package:office_work/presentation/home/widgets/edit_bookmark_dialog.dart';
 import 'package:office_work/presentation/home/widgets/edit_plan_dialog.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';

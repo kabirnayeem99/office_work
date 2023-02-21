@@ -11,6 +11,7 @@ import 'package:office_work/presentation/config/hadith_colors.dart';
 import 'package:office_work/presentation/home/widgets/color_list.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+// ignore: must_be_immutable
 class AddToBookmarkDialog extends StatelessWidget {
   DropDownController dropDownController = Get.put(DropDownController());
   AddToBookmarkDialog({
@@ -81,33 +82,36 @@ class AddToBookmarkDialog extends StatelessWidget {
                             itemBuilder: (context, index) {
                               return Padding(
                                 padding: EdgeInsets.symmetric(vertical: 5.px),
-                                child: Container(
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 14.px),
-                                  height: 48.px,
-                                  decoration: BoxDecoration(
-                                      color: HadithColors.whiteAntiFlash,
-                                      borderRadius:
-                                          BorderRadius.circular(5.px)),
-                                  child: Row(
-                                    children: [
-                                      SvgPicture.asset(
-                                        dropDownController
-                                            .dropDownList[index].icon,
-                                      ),
-                                      SizedBox(
-                                        width: 10.px,
-                                      ),
-                                      Text(
-                                        dropDownController
-                                            .dropDownList[index].title,
-                                        style: TextStyle(
-                                          color: HadithColors.blackCoral,
-                                          fontSize: 13.px,
-                                          fontWeight: FontWeight.w400,
+                                child: GestureDetector(
+                                  onTap: () => Get.back(),
+                                  child: Container(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 14.px),
+                                    height: 48.px,
+                                    decoration: BoxDecoration(
+                                        color: HadithColors.whiteAntiFlash,
+                                        borderRadius:
+                                            BorderRadius.circular(5.px)),
+                                    child: Row(
+                                      children: [
+                                        SvgPicture.asset(
+                                          dropDownController
+                                              .dropDownList[index].icon,
                                         ),
-                                      ),
-                                    ],
+                                        SizedBox(
+                                          width: 10.px,
+                                        ),
+                                        Text(
+                                          dropDownController
+                                              .dropDownList[index].title,
+                                          style: TextStyle(
+                                            color: HadithColors.blackCoral,
+                                            fontSize: 13.px,
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               );
@@ -163,6 +167,10 @@ class AddToBookmarkDialog extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               child: TextField(
+                style: const TextStyle(
+                  color: HadithColors.blackCoral,
+                  decoration: TextDecoration.none,
+                ),
                 decoration: _bookmarkDialogInputDecoration(
                   context: context,
                   hintText: 'Example Name',

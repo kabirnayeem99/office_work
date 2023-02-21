@@ -72,7 +72,7 @@ class HomePageUpperPart extends StatelessWidget {
               top: Config.screenHeight! / 2.4.px,
               left: 15.px,
               right: 15.px,
-              child:  HomeDashboard(),
+              child: const HomeDashboard(),
             ),
           ],
         ),

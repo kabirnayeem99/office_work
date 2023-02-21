@@ -44,7 +44,6 @@ class AllBookSection extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 6),
               child: InkWell(
                 onTap: () {
-                  print(index);
                   index == 0
                       ? Get.bottomSheet(
                           const ShowMoreOptionBottomSheetForEditPlan(),
@@ -91,13 +90,11 @@ class AllBookSection extends StatelessWidget {
                           Stack(
                             alignment: Alignment.center,
                             children: [
-
-                              
                               SvgPicture.asset(
                                 booksList[index].icon,
-                              colorFilter: ColorFilter.mode(
-                                  booksList[index].iconColor,
-                                  BlendMode.srcATop),
+                                colorFilter: ColorFilter.mode(
+                                    booksList[index].iconColor,
+                                    BlendMode.srcATop),
                               ),
                               Text(
                                 firstLetter,

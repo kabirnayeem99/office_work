@@ -18,8 +18,6 @@ class SharePostDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    late final TextTheme textTheme = Theme.of(context).textTheme;
-    late final TextStyle? titleSmallTextStyle = textTheme.titleSmall;
     Config().init(context);
     return Dialog(
       elevation: 0,

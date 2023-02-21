@@ -47,6 +47,7 @@ InputDecoration defaultInputDecoration({
         color: HadithColors.blueUCLABlue.withOpacity(0.8),
       ), // BorderSide
     ),
+    enabled: false,
     hintText: hintText,
     hintStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
           color: HadithColors.blackCoral,
@@ -66,16 +67,16 @@ InputDecoration defaultInputDecoration({
         colorFilter: buildColorFilterToChangeColor(HadithColors.blueUCLABlue),
       ),
     ),
-    prefixIcon: SizedBox(
-      height: 18.px,
-      width: 18.px,
-      child: SvgPicture.asset(
-        prefixIconPath,
-        height: 18.px,
-        width: 18.px,
-        fit: BoxFit.scaleDown,
-        //colorFilter: buildColorFilterToChangeColor(HadithColors.blueUCLABlue),
-      ),
-    ),
+    // prefixIcon: SizedBox(
+    //   height: 18.px,
+    //   width: 18.px,
+    //   child: SvgPicture.asset(
+    //     prefixIconPath,
+    //     height: 18.px,
+    //     width: 18.px,
+    //     fit: BoxFit.scaleDown,
+    //     //colorFilter: buildColorFilterToChangeColor(HadithColors.blueUCLABlue),
+    //   ),
+    // ),
   );
 }

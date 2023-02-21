@@ -39,14 +39,12 @@ class AddToHifzDialog extends StatelessWidget {
               ),
             ),
             SizedBox(height: 24.px),
-            Container(
-              alignment: Alignment.centerLeft,
-              child: TextField(
-                decoration: defaultInputDecoration(
-                  context: context,
-                  hintText: 'Add To Previous Plan',
-                  suffixIconPath: SvgPath.icDownArrow,
-                ),
+            TextField(
+              textAlign: TextAlign.left,
+              decoration: defaultInputDecoration(
+                context: context,
+                hintText: 'Add To Previous Plan',
+                suffixIconPath: SvgPath.icDownArrow,
               ),
             ),
             SizedBox(height: 15.px),

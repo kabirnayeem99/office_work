@@ -73,7 +73,7 @@ List<BooksModel> booksList = [
     writerName: 'Writer Name',
     totalHadith: 5235,
     book: 'Hadith',
-    iconColor: Color.fromARGB(157, 122, 24, 220),
+    iconColor: const Color.fromARGB(157, 122, 24, 220),
   ),
   BooksModel(
     icon: SvgPath.icPolygon,
@@ -89,7 +89,7 @@ List<BooksModel> booksList = [
     writerName: 'Writer Name',
     totalHadith: 5235,
     book: 'Hadith',
-    iconColor: Color.fromARGB(143, 3, 152, 38),
+    iconColor: const Color.fromARGB(143, 3, 152, 38),
   ),
   BooksModel(
     icon: SvgPath.icPolygon,
@@ -97,7 +97,7 @@ List<BooksModel> booksList = [
     writerName: 'Writer Name',
     totalHadith: 5235,
     book: 'Hadith',
-    iconColor: Color.fromARGB(255, 62, 194, 231),
+    iconColor: const Color.fromARGB(255, 62, 194, 231),
   ),
   BooksModel(
     icon: SvgPath.icPolygon,
@@ -105,7 +105,7 @@ List<BooksModel> booksList = [
     writerName: 'Writer Name',
     totalHadith: 5235,
     book: 'Hadith',
-    iconColor: Color.fromARGB(255, 220, 24, 27),
+    iconColor: const Color.fromARGB(255, 220, 24, 27),
   ),
   BooksModel(
     icon: SvgPath.icPolygon,
@@ -113,7 +113,7 @@ List<BooksModel> booksList = [
     writerName: 'Writer Name',
     totalHadith: 5235,
     book: 'Hadith',
-    iconColor: Color.fromARGB(255, 121, 101, 25),
+    iconColor: const Color.fromARGB(255, 121, 101, 25),
   ),
   BooksModel(
     icon: SvgPath.icPolygon,
@@ -121,6 +121,6 @@ List<BooksModel> booksList = [
     writerName: 'Writer Name',
     totalHadith: 5235,
     book: 'Hadith',
-    iconColor: Color.fromARGB(255, 87, 20, 111),
+    iconColor: const Color.fromARGB(255, 87, 20, 111),
   ),
 ];
