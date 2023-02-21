@@ -29,17 +29,18 @@ class HomePageUpperPart extends StatelessWidget {
               width: double.infinity,
               height: Config.screenHeight! / 2,
               decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Color(0xff0f8569),
-                        Color(0xff2ab795),
-                      ]),
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(7.w),
-                    bottomRight: Radius.circular(7.w),
-                  )),
+                gradient: const LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xff0f8569),
+                      Color(0xff2ab795),
+                    ]),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(7.w),
+                  bottomRight: Radius.circular(7.w),
+                ),
+              ),
             ),
             Positioned(
               bottom: Config.blockSizeVertical! * 9,
