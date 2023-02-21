@@ -88,7 +88,7 @@ class SharePostDialog extends StatelessWidget {
                     },
                     height: 19.px,
                     width: 19.px,
-                    svgPath: SvgPath.icCopy,
+                    svgPath: SvgPath.icCopyIcon,
                     padding: EdgeInsets.only(right: 10.px),
                   ),
                 ],
